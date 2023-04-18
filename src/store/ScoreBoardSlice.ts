@@ -1,19 +1,11 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
 import { RootState } from "./store";
+import { ScoreBoardType } from "../interfaces/interfaces"
 
-export interface ScoreBoard {
-  scoreBoard?: {
-    homeTeam: string;
-    homeTeamScore: number;
-    awayTeam: string;
-    awayTeamScore: number;
-    startedTime: number;
-    id: string;
-  }[];
-}
 
-const initialState: ScoreBoard = {
+
+const initialState: ScoreBoardType = {
   scoreBoard: [
     {
       homeTeam: "Mexico",
